@@ -1,0 +1,9 @@
+sudo
+dmenu
+htop
+git
+xclip
+alacritty
+feh
+chromium
+
