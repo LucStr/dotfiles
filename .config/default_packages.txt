@@ -6,4 +6,6 @@ xclip
 alacritty
 feh
 chromium
+exa
+bat
 
