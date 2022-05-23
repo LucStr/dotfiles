@@ -32,6 +32,7 @@ setopt appendhistory
 
 export EDITOR='nvim'
 export MYVIMRC='.config/nvim/init.vim'
+export SHELL='/bin/zsh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 autoload -Uz compinit && compinit
