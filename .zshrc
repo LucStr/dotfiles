@@ -22,7 +22,7 @@ alias cat='bat'
 alias copy='xclip -sel clip'
 alias lvim='~/.local/bin/lvim'
 alias ssh='TERM=xterm-256color ssh'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.config/.git --work-tree=$HOME'
 
 # Persist History
 HISTFILE=~/.zsh_history
@@ -30,7 +30,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-export EDITOR='lvim'
+export EDITOR='nvim'
+export MYVIMRC='.config/nvim/init.vim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 autoload -Uz compinit && compinit

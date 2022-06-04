@@ -8,4 +8,4 @@ feh
 chromium
 exa
 bat
-
+neovim
