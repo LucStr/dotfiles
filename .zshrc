@@ -22,7 +22,7 @@ alias cat='bat'
 alias copy='xclip -sel clip'
 alias lvim='~/.local/bin/lvim'
 alias ssh='TERM=xterm-256color ssh'
-alias config='/usr/bin/git --git-dir=$HOME/.config/.git --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 # Persist History
 HISTFILE=~/.zsh_history
