@@ -123,6 +123,13 @@ return require('packer').startup({
             end,
         })
 
+        use({
+            'numToStr/Navigator.nvim',
+            config = function()
+                require('Navigator').setup()
+            end,
+        })
+
         -------------------------
         -- Editing to the MOON --
         -------------------------

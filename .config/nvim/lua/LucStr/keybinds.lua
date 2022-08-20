@@ -47,6 +47,13 @@ map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 map('o', 'A', ':<C-U>normal! mzggVG<CR>`z')
 map('x', 'A', ':<C-U>normal! ggVG<CR>')
 
+-- Window Navigation
+map({'n', 'i', 't'}, '<A-h>', '<CMD>NavigatorLeft<CR>')
+map({'n', 'i', 't'}, '<A-j>', '<CMD>NavigatorDown<CR>')
+map({'n', 'i', 't'}, '<A-k>', '<CMD>NavigatorUp<CR>')
+map({'n', 'i', 't'}, '<A-l>', '<CMD>NavigatorRight<CR>')
+map({'n', 'i', 't'}, '<A-p>', '<CMD>NavigatorPrevious<CR>')
+
 -- Search through all files
 map('n', '<leader>f', '<CMD>Telescope live_grep<CR>')
 
