@@ -18,15 +18,7 @@ map('n', '<leader>w', '<CMD>update<CR>')
 map('n', '<leader>W', '<CMD>wall<CR>')
 
 -- Quit neovim
-map('n', '<C-Q>', '<CMD>q<CR>')
-
--- leader-o/O inserts blank line below/above
-map('n', '<leader>o', 'o<ESC>')
-map('n', '<leader>O', 'O<ESC>')
-
--- Move to the next/previous buffer
-map('n', '<leader>[', '<CMD>bp<CR>')
-map('n', '<leader>]', '<CMD>bn<CR>')
+map('n', '<C-Q>', '<CMD>qa!<CR>')
 
 -- Move to last buffer
 map('n', "''", '<CMD>b#<CR>')
@@ -59,6 +51,9 @@ map('n', '<leader>f', '<CMD>Telescope live_grep<CR>')
 
 -- Open Project explorer
 map('n', '<leader>p', '<CMD>Telescope projects<CR>')
+
+-- Open oldfiles
+map('n', '<leader>o', '<CMD>Telescope oldfiles<CR>')
 
 -- Open Explorer
 map('n', '<leader>e', '<CMD>NvimTreeToggle<CR>')

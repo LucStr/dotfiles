@@ -29,7 +29,10 @@ return require('packer').startup({
         ----------------------------------------
 
         use({
-            'mhinz/vim-startify'
+            'goolord/alpha-nvim',
+            config = function()
+                require('alpha').setup(require('alpha.themes.startify').config)
+            end,
         })
 
         use({
@@ -65,7 +68,7 @@ return require('packer').startup({
                 require('LucStr.plugins.treesitter')
             end,
         })
-        
+
         --------------------------
         -- Editor UI Niceties --
         --------------------------
@@ -77,7 +80,20 @@ return require('packer').startup({
                 require('colorizer').setup()
             end,
         })
-       
+
+        use({
+            'lukas-reineke/indent-blankline.nvim',
+            config = function()
+               require('LucStr.plugins.indent')
+            end,
+        })
+
+        use({
+            'lewis6991/gitsigns.nvim',
+            config = function()
+                require('LucStr.plugins.gitsigns')
+            end
+        })
         ---------------------------------
         -- Navigation and Fuzzy Search --
         ---------------------------------
@@ -135,10 +151,10 @@ return require('packer').startup({
         -------------------------
 
         use({
-            'lewis6991/gitsigns.nvim',
+            'windwp/nvim-autopairs',
             config = function()
-                require('LucStr.plugins.gitsigns')
-            end
+                require('LucStr.plugins.autopairs')
+            end,
         })
 
         --------------

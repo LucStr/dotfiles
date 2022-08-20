@@ -75,6 +75,12 @@ _G.packer_plugins = {
     path = "/home/luca/.local/share/nvim/site/pack/packer/start/Navigator.nvim",
     url = "https://github.com/numToStr/Navigator.nvim"
   },
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
+    loaded = true,
+    path = "/home/luca/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["coc.nvim"] = {
     config = { "\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23LucStr.plugins.lsp\frequire\0" },
     loaded = true,
@@ -87,6 +93,12 @@ _G.packer_plugins = {
     path = "/home/luca/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26LucStr.plugins.indent\frequire\0" },
+    loaded = true,
+    path = "/home/luca/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lualine.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27LucStr.plugins.lualine\frequire\0" },
     loaded = true,
@@ -98,6 +110,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/luca/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29LucStr.plugins.autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/luca/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-colorizer.lua"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
@@ -172,7 +190,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope-symbols.nvim"
   },
   ["telescope.nvim"] = {
-    after = { "project.nvim", "telescope-symbols.nvim", "telescope-fzf-native.nvim" },
+    after = { "telescope-fzf-native.nvim", "telescope-symbols.nvim", "project.nvim" },
     config = { "\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29LucStr.plugins.telescope\frequire\0" },
     loaded = false,
     needs_bufread = true,
@@ -185,43 +203,50 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/luca/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["vim-startify"] = {
-    loaded = true,
-    path = "/home/luca/.local/share/nvim/site/pack/packer/start/vim-startify",
-    url = "https://github.com/mhinz/vim-startify"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27LucStr.plugins.lualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: nightfox.nvim
-time([[Config for nightfox.nvim]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\25LucStr.plugins.theme\frequire\0", "config", "nightfox.nvim")
-time([[Config for nightfox.nvim]], false)
--- Config for: Navigator.nvim
-time([[Config for Navigator.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14Navigator\frequire\0", "config", "Navigator.nvim")
-time([[Config for Navigator.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 LucStr.plugins.fileexplorer\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 -- Config for: toggleterm.nvim
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24LucStr.plugins.term\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29LucStr.plugins.autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: Navigator.nvim
+time([[Config for Navigator.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14Navigator\frequire\0", "config", "Navigator.nvim")
+time([[Config for Navigator.nvim]], false)
 -- Config for: coc.nvim
 time([[Config for coc.nvim]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\23LucStr.plugins.lsp\frequire\0", "config", "coc.nvim")
 time([[Config for coc.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\27LucStr.plugins.lualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28LucStr.plugins.gitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0 LucStr.plugins.fileexplorer\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26LucStr.plugins.indent\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: nightfox.nvim
+time([[Config for nightfox.nvim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\25LucStr.plugins.theme\frequire\0", "config", "nightfox.nvim")
+time([[Config for nightfox.nvim]], false)
 -- Config for: nvim-web-devicons
 time([[Config for nvim-web-devicons]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-web-devicons")
@@ -230,7 +255,7 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au CursorHold * ++once lua require("packer.load")({'nvim-colorizer.lua', 'nvim-treesitter', 'telescope.nvim'}, { event = "CursorHold *" }, _G.packer_plugins)]]
+vim.cmd [[au CursorHold * ++once lua require("packer.load")({'telescope.nvim', 'nvim-treesitter', 'nvim-colorizer.lua'}, { event = "CursorHold *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
