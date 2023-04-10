@@ -131,7 +131,17 @@ keys = [
     Key([mod], "F2", lazy.spawn("/usr/bin/nautilus"), desc="Starts Nautilus"),
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [
+    Group("1"),
+    Group("2"),
+    Group("3"),
+    Group("4"),
+    Group("5"),
+    Group("6"),
+    Group("7"),
+    Group("8"),
+    Group("9", matches=[Match(wm_class=["Spotify"])]),
+]
 
 for i in groups:
     keys.extend([

@@ -28,3 +28,23 @@ then
 else
   pulsemixer --unmute
 fi
+
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    # Check for a currently running instance of the agent
+    RUNNING_AGENT="$(ps -ax | grep 'ssh-agent' | grep -v grep | wc -l | tr -d '[:space:]')"
+
+    if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent and set environment variables
+        eval "$(ssh-agent -s)"
+    fi
+else
+    echo "SSH Agent is already running."
+fi
+
+# Check if the key is already added to the agent
+if ! ssh-add -l | grep -q "id_rsa"; then
+    # Add the key to the agent
+    ssh-add ~/.ssh/id_rsa
+else
+    echo "Key is already added to the agent."
+fi
